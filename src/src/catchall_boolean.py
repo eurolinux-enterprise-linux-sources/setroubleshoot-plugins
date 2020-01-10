@@ -20,6 +20,7 @@
 #
 
 import gettext
+import os
 translation=gettext.translation('setroubleshoot-plugins', fallback=True)
 _=translation.ugettext
 
@@ -59,19 +60,35 @@ class plugin(Plugin):
         return _("you want to %s") % txt[0].lower() + txt[1:]
         
     def get_do_text(self, avc, args):
-        return _("setsebool -P %s %s") % args
+        return _("setsebool -P %s %s") % (args[0], args[1])
 
     def get_then_text(self, avc, args):
-        return _("You must tell SELinux about this by enabling the '%s' boolean.") % args[0]
+        text = _("You must tell SELinux about this by enabling the '%s' boolean.") % args[0]
+        try:
+            if args[2]:
+                text += _("You can read '%s' man page for more details.") % args[2]
+        except IndexError:
+            pass
+
+        return text
+        
+    def check_for_man(self, name):
+        man_page = name.split("_")[0] + "_selinux"
+        if os.path.isfile("/usr/share/man/man8/%s.8.gz" % man_page):
+            return man_page
+        return None
 
     def analyze(self, avc):
-        if  len(avc.bools) > 0:
+        man_page = self.check_for_man(avc.tcontext.type)
+        if  len(avc.bools) > 0:            
             reports = []
             fix = self.fix_description
             fix_cmd = ""
             bools = avc.bools
             for b in bools:
-                reports.append(self.report((b[0], b[1])))
+                if not man_page:
+                    man_page = self.check_for_man(b)
+                reports.append(self.report((b[0], b[1], man_page)))
 
             return reports
         return None

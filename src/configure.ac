@@ -1,4 +1,4 @@
-AC_INIT([setroubleshoot-plugins], [3.0.16],
+AC_INIT([setroubleshoot-plugins], [3.0.40],
         [http://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=setroubleshoot])
 AC_CONFIG_SRCDIR(src/Makefile.am)
 AC_CONFIG_AUX_DIR([.])
@@ -15,15 +15,12 @@ AC_SUBST(GETTEXT_PACKAGE)
 AM_GLIB_GNU_GETTEXT
 IT_PROG_INTLTOOL
 ALL_LINGUAS="\
-af	am	ar	as	be	bg	bn_IN	bn	ca	\
-cs	cy	da	de	el	en_GB	es	et	eu_ES	\
-fa	fi	fr	gl	gu	he	hi	hr	hu	\
-hy	id	is	it	ja	ka	kn	ko	ku	\
-lo	lt	lv	mk	ml	mr	ms	my	nb	\
-nl	nn	nso	or	pa	pl	pt_BR	pt	ro	\
-ru	si	sk	sl	sq	sr@latin	sr	sv	\
-ta	te	th	tr	uk	ur	vi	zh_CN	zh_TW	\
-zu									\
+af am ang ar as ast az az_IR be be@latin bg bn bn_IN br bs ca ca@valencia \
+crh cs cy da de dz el en en_CA en_GB en@shaw eo es et eu fa fi fr ga gl gu \
+he hi hr hu hy ia id io is it ja ka kg kk kn ko ku lg li lt lv mai mi mk \
+ml mn mr ms my nb nds ne nl nn nso oc or pa pl ps pt pt_BR ro ru rw si sk \
+sl sq sr sr@ije sr@latin sv ta te th tk tr tt ug uk ur uz uz@cyrillic vi \
+wa xh yi zh_CN zh_HK zh_TW
 "
 
 AC_PROG_LN_S

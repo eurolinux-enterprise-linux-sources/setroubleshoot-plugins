@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 3.0.16
+Version: 3.0.40
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -13,7 +13,7 @@ BuildArch: noarch
 
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
-Requires: setroubleshoot-server >= 3.0.23-1
+Requires: setroubleshoot-server >= 3.0.47-1
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
 
@@ -44,6 +44,64 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Sat May 12 2012  <dwalsh@redhat.com> - 3.0.40-1
+- Update-translations
+Resolves: #575686
+
+* Wed May 9 2012  <dwalsh@redhat.com> - 3.0.39-1
+- Update-translations
+
+* Thu Apr 26 2012  <dwalsh@redhat.com> - 3.0.38-1
+- Update-translations
+- Have catchall_booleans report the correct man page if it exists
+
+* Wed Mar 28 2012  <dwalsh@redhat.com> - 3.0.36-1
+- Update-translations
+- Fix leaks and catchall_labels to better detect leaks
+
+* Mon Mar 19 2012  <dwalsh@redhat.com> - 3.0.35-1
+- Update-translations
+
+* Sat Mar 17 2012  <dwalsh@redhat.com> - 3.0.34-1
+- Add associate.py plugin
+- Update-translations
+
+* Thu Mar 8 2012  <dwalsh@redhat.com> - 3.0.33-1
+- Update-translations
+
+* Thu Mar 1 2012  <dwalsh@redhat.com> - 3.0.30-1
+- Update-translations
+
+* Wed Feb 22 2012  <dwalsh@redhat.com> - 3.0.28-1
+- Update-translations
+
+* Tue Feb 14 2012  <dwalsh@redhat.com> - 3.0.27-1
+- Update-translations
+
+* Tue Feb 7 2012  <dwalsh@redhat.com> - 3.0.24-1
+- Update-translations, 
+
+* Wed Feb 1 2012  <dwalsh@redhat.com> - 3.0.23-1
+- Update-translations, 
+- Fix a couple of typos
+
+* Fri Jan 27 2012  <dwalsh@redhat.com> - 3.0.22-1
+- Update-translations, 
+- Fix a couple of typos
+
+* Mon Jan 23 2012  <dwalsh@redhat.com> - 3.0.21-1
+- Change catchall_booleans to include reference to man page if available
+- Update trans
+
+* Sat Jan 14 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 3.0.18-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
+* Mon Nov 14 2011  <dwalsh@redhat.com> - 3.0.18-1
+- connect_port and bind_ports should handle unreserved_port_t
+	
+* Wed Nov 9 2011  <dwalsh@redhat.com> - 3.0.17-1
+- restorecon plugin should not fire on nfs_t or cifs_t directories
+
 * Tue Apr 19 2011  <dwalsh@redhat.com> - 3.0.16-1
 - Update translations
 - Change allow_execmod plugin to only fire if target_path is lib_t
