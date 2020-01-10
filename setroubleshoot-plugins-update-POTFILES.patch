@@ -1,0 +1,37 @@
+diff --git a/po/POTFILES.in b/po/POTFILES.in
+index fa7417f..0059a31 100644
+--- a/po/POTFILES.in
++++ b/po/POTFILES.in
+@@ -6,7 +6,6 @@ src/allow_execmod.py
+ src/allow_execstack.py
+ src/allow_ftpd_use_cifs.py
+ src/allow_ftpd_use_nfs.py
+-src/associate.py
+ src/automount_exec_config.py
+ src/bind_ports.py
+ src/catchall_boolean.py
+@@ -20,7 +19,6 @@ src/disable_ipv6.py
+ src/file.py
+ src/filesystem_associate.py
+ src/httpd_can_sendmail.py
+-src/httpd_unified.py
+ src/httpd_write_content.py
+ src/__init__.py
+ src/kernel_modules.py
+@@ -43,4 +41,3 @@ src/sys_resource.py
+ src/vbetool.py
+ src/wine.py
+ src/xen_image.py
+-booleans_trans.py
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 95240b0..eed945a 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -12,7 +12,6 @@ PLUGIN_FILES =				\
+ 	allow_execstack.py		\
+ 	allow_ftpd_use_cifs.py		\
+ 	allow_ftpd_use_nfs.py		\
+-	associate.py			\
+ 	automount_exec_config.py	\
+ 	bind_ports.py			\
+ 	catchall_boolean.py		\
