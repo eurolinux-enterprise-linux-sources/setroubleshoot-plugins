@@ -1,13 +1,14 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
 Version: 3.0.40
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
 # git clone git://git.fedorahosted.org/git/setroubleshoot.git; cd setroubleshoot
 # git archive --prefix setroubleshoot-plugins-3.0.10/426cf8ea7a38e8c5179981219d831368161b65f2 > setroubleshoot-plugins-3.0.10.tar.gz
 Source0: %{name}-%{version}.tar.gz
+Patch: setroubleshoo-plugins-RHEL6_4.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
@@ -25,6 +26,7 @@ to interpret SELinux AVC denials.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure
@@ -44,6 +46,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Sat Oct 13 2012 <mgrepl@redhat.com> - 3.0.40-2
+- Fix catchall_booleans report the correct man page if it exists
+Resolves:#842445
+
 * Sat May 12 2012  <dwalsh@redhat.com> - 3.0.40-1
 - Update-translations
 Resolves: #575686

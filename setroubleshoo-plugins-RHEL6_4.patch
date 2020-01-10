@@ -1,0 +1,43 @@
+diff -Nur setroubleshoot-plugins.old/src/catchall_boolean.py setroubleshoot-plugins-3.0.40/src/catchall_boolean.py
+--- setroubleshoot-plugins.old/src/catchall_boolean.py	2012-04-26 19:50:26.000000000 +0200
++++ setroubleshoot-plugins-3.0.40/src/catchall_boolean.py	2012-10-12 17:18:58.788492325 +0200
+@@ -63,31 +63,25 @@
+         return _("setsebool -P %s %s") % (args[0], args[1])
+ 
+     def get_then_text(self, avc, args):
+-        text = _("You must tell SELinux about this by enabling the '%s' boolean.") % args[0]
+         try:
+-            if args[2]:
+-                text += _("You can read '%s' man page for more details.") % args[2]
++            if os.path.isfile("/usr/share/man/man8/%s_selinux.8.gz" % (args[2].split("_")[0])) and args[2] != "":
++                return _("You must tell SELinux about this by enabling the '%s' boolean. You can read '%s' man page for more details.") % (args[0], args[2])
++
+         except IndexError:
+-            pass
++            return _("You must tell SELinux about this by enabling the '%s'boolean.") % args[0]
+ 
+-        return text
+-        
+-    def check_for_man(self, name):
+-        man_page = name.split("_")[0] + "_selinux"
+-        if os.path.isfile("/usr/share/man/man8/%s.8.gz" % man_page):
+-            return man_page
+-        return None
++        else:
++            return _("You must tell SELinux about this by enabling the '%s'boolean.") % args[0]
+ 
+     def analyze(self, avc):
+-        man_page = self.check_for_man(avc.tcontext.type)
++        ttype = avc.tcontext.type
++        man_page = ttype.split("_")[0]+"_selinux"
+         if  len(avc.bools) > 0:            
+             reports = []
+             fix = self.fix_description
+             fix_cmd = ""
+             bools = avc.bools
+             for b in bools:
+-                if not man_page:
+-                    man_page = self.check_for_man(b)
+                 reports.append(self.report((b[0], b[1], man_page)))
+ 
+             return reports
