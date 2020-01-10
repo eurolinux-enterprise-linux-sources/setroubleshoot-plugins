@@ -1,14 +1,15 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
 Version: 3.0.40
-Release: 2%{?dist}
+Release: 3.1%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
 # git clone git://git.fedorahosted.org/git/setroubleshoot.git; cd setroubleshoot
 # git archive --prefix setroubleshoot-plugins-3.0.10/426cf8ea7a38e8c5179981219d831368161b65f2 > setroubleshoot-plugins-3.0.10.tar.gz
 Source0: %{name}-%{version}.tar.gz
-Patch: setroubleshoo-plugins-RHEL6_4.patch
+Patch1: setroubleshoo-plugins-RHEL6_4.patch
+Patch2: setroubleshoot-plugins-commands-getoutput-getstatusoutput.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
@@ -26,7 +27,8 @@ to interpret SELinux AVC denials.
 
 %prep
 %setup -q
-%patch -p1
+%patch1 -p1 -b .rhel-6_4
+%patch2 -p1 -b .commands_output
 
 %build
 %configure
@@ -46,6 +48,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Thu May 26 2016 Petr Lautrbach <plautrba@redhat.com> - 3.0.40-3.1
+- Don't use commands.get*output()
+Resolves: CVE-2016-4444, CVE-2016-4446
+
 * Sat Oct 13 2012 <mgrepl@redhat.com> - 3.0.40-2
 - Fix catchall_booleans report the correct man page if it exists
 Resolves:#842445
