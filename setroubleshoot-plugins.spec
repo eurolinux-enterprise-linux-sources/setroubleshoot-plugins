@@ -1,7 +1,7 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 3.0.66
-Release: 2.1%{?dist}
+Version: 3.0.67
+Release: 4%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -10,13 +10,15 @@ Source0: https://releases.pagure.org/setroubleshoot/%{name}-%{version}.tar.gz
 # Pushed directly to upstream sources
 # Source1: ru.po
 Patch1: 0001-Update-translations.patch
-Patch2: 0002-Update-translations.patch
+Patch2: 0002-plugins-Handle-no-allowed_target_types-properly.patch
+Patch3: 0003-plugins-bind_ports-Add-missing-parenthesis.patch
+Patch4: 0004-Update-translations.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
-Requires: setroubleshoot-server >= 3.2.29
+Requires: setroubleshoot-server >= 3.2.30
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
 
@@ -49,6 +51,20 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Jun 11 2019 Vit Mojzis <vmojzis@redhat.com> - 3.0.67-4
+- Update translations (#1689859)
+
+* Tue Aug 07 2018 Vit Mojzis <vmojzis@redhat.com> - 3.0.67-3
+- Handle no "allowed_target_types" properly (#1460642, #1460648)
+
+* Mon Jul 30 2018 Vit Mojzis <vmojzis@redhat.com> - 3.0.67-2
+- Update translations (#1569463)
+
+* Tue May 15 2018 Vit Mojzis <vmojzis@redhat.com> - 3.0.67-1
+- bind_ports: Do not use when there are no allowed_target_types (#1255627)
+- Fix summary and "if" text for AVCs with unknown target path (#1437772)
+- Update translations
+
 * Fri Dec 08 2017 Petr Lautrbach <plautrba@redhat.com> - 3.0.66-2.1
 - Update translations (#1481231)
 
