@@ -32,9 +32,10 @@ class plugin(Plugin):
 
     problem_description = _('''
     SELinux has denied $SOURCE from connecting to a network port $PORT_NUMBER within a sandbox.
-    If $SOURCE should be allowed to connect on $PORT_NUMBER, you need to use a different sandbox type like sandbox_web_t or sandbox_net_t.  sandbox -X -t sandbox_net_t $SOURCE.
+    If $SOURCE should be allowed to connect on $PORT_NUMBER, you need to use a different sandbox type like sandbox_web_t or sandbox_net_t.  
+    # sandbox -X -t sandbox_net_t $SOURCE
     \n\nIf $SOURCE is not supposed
-    to connect to $PORT_NUMBER, this could signal a intrusion attempt.
+    to connect to $PORT_NUMBER, this could signal an intrusion attempt.
     ''')
 
     fix_description = _('''
@@ -43,7 +44,7 @@ class plugin(Plugin):
     ''')
 
     fix_cmd = ''
-    if_text = _('you want to allow $SOURCE_PATH to connect to network port $PORT_NUMBER')
+    if_text = _("If you want to allow $SOURCE_PATH to connect to network port $PORT_NUMBER")
 
     then_text =  _("""you need to modify the sandbox type. sandbox_web_t or sandbox_net_t.
 For example:

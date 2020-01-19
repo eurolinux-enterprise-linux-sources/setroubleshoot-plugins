@@ -59,7 +59,7 @@ class plugin(Plugin):
         txt=seobject.boolean_desc(args[0])
         if not isinstance(txt, unicode):
             txt=unicode(txt, encoding="utf8")
-        return _("you want to %s") % (txt[0].lower() + txt[1:])
+        return _("If you want to %s") % (txt[0].lower() + txt[1:])
 
     def get_do_text(self, avc, args):
         return _("setsebool -P %s %s") % (args[0], args[1])
@@ -67,7 +67,7 @@ class plugin(Plugin):
     def get_then_text(self, avc, args):
         text = _("You must tell SELinux about this by enabling the '%s' boolean.\n") % args[0]
         try:
-            if args[2]:
+            if args[2] and args[2] != 'None':
                 text += _("You can read '%s' man page for more details.") % args[2]
         except IndexError:
             pass

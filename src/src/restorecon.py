@@ -37,6 +37,15 @@ def customizable(target):
         fd.close()
     return target in customizable_types
 
+
+# List of path prefixes for which this plugin is not executed
+excluded_paths = ["/sys/fs"]
+# Test if the specified path starts with some excluded prefix
+def excluded_path(target_path):
+    for path in excluded_paths:
+        if target_path.startswith(path): return True
+    return False
+
 import selinux
 class plugin(Plugin):
     summary = _('''
@@ -54,9 +63,9 @@ class plugin(Plugin):
     def get_problem_description(self, avc, args):
         return _('''
     SELinux denied access requested by $SOURCE. $TARGET_PATH may
-    be a mislabeled.  $TARGET_PATH default SELinux type is
+    be mislabeled.  $TARGET_PATH default SELinux type is
     <B>%s</B>, but its current type is <B>$TARGET_TYPE</B>. Changing
-    this file back to the default type, may fix your problem.
+    this file back to the default type may fix your problem.
     <p>
     File contexts can be assigned to a file in the following ways.
     <ul>
@@ -78,12 +87,14 @@ class plugin(Plugin):
     If you believe this is a bug, please file a bug report against this package.
     ''') % args[1]
 
-    if_text = _('you want to fix the label. \n$TARGET_PATH default label should be %s.')
+    if_text = _("If you want to fix the label. \n$TARGET_PATH default label should be %s.")
 
     def get_if_text(self, avc, args):
         return self.if_text % args[1]
 
-    then_text = _('you can run restorecon.')
+
+    then_text = _('you can run restorecon. The access attempt may have been stopped due to insufficient' \
+         + ' permissions to access a parent directory in which case try to change the following command accordingly.')
     do_text = '# /sbin/restorecon -v $TARGET_PATH'
 
     def __init__(self):
@@ -109,6 +120,7 @@ class plugin(Plugin):
             if avc.tpath is None: return None
             if avc.tpath == "/": return None
             if avc.tpath[0] != '/': return None
+            if excluded_path(avc.tpath): return None
             if customizable(avc.tcontext.type):
                 return None
             try:

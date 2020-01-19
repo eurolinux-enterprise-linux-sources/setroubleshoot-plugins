@@ -1,20 +1,22 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 3.0.64
+Version: 3.0.66
 Release: 2.1%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
-Source0: https://fedorahosted.org/releases/s/e/setroubleshoot/%{name}-%{version}.tar.gz
+Source0: https://releases.pagure.org/setroubleshoot/%{name}-%{version}.tar.gz
 # https://bugzilla.redhat.com/show_bug.cgi?id=1030376
-Source1: ru.po
-Patch1: setroubleshoot-plugins-translations.patch
+# Pushed directly to upstream sources
+# Source1: ru.po
+Patch1: 0001-Update-translations.patch
+Patch2: 0002-Update-translations.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
-Requires: setroubleshoot-server >= 3.2.26
+Requires: setroubleshoot-server >= 3.2.29
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
 
@@ -26,8 +28,8 @@ to interpret SELinux AVC denials.
 
 %prep
 %setup -q
-%patch1 -p1
-cp %{SOURCE1} po/
+%autosetup -p 2
+#cp %{SOURCE1} po/
 
 %build
 %configure
@@ -47,6 +49,23 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Dec 08 2017 Petr Lautrbach <plautrba@redhat.com> - 3.0.66-2.1
+- Update translations (#1481231)
+
+* Mon Nov 06 2017 Vit Mojzis <vmojzis@redhat.com> - 3.0.66-1
+- Fix catchall plugin message for process2 (#1507909)
+- Correct grammatical errors (#1331780)
+- Do not split If sentences to framework and plugins (#1177347)
+- Fix typo in "lt" translation header (#1468985)
+- catchall_boolean.py - 'None' man page is None man page
+- Fix restorecon "then" text (#1332097)
+
+* Wed Mar 15 2017 Petr Lautrbach <plautrba@redhat.com> - 3.0.65-1
+- Remove duplicated strings from sys_resource.py
+- Spelling fixes
+- Fix catchall plugin message for capability2
+- Stop executing restorecon plugin on specified path prefixes
+
 * Wed Sep 07 2016 Petr Lautrbach <plautrba@redhat.com> 3.0.64-2.1
 - Update translations.
 

@@ -1,0 +1,1664 @@
+From cf02883ca088226abc577be5fb41287103ab505d Mon Sep 17 00:00:00 2001
+From: Vit Mojzis <vmojzis@redhat.com>
+Date: Mon, 20 Nov 2017 19:07:46 +0100
+Subject: [PATCH] Update translations
+
+Source
+    https://fedora.zanata.org/iteration/view/setroubleshoot/stable
+
+Resolves: rhbz#1481227, rhbz#1481231
+---
+ plugins/po/as.po    |   2 +-
+ plugins/po/bg.po    |   2 +-
+ plugins/po/bn.po    |   2 +-
+ plugins/po/bn_IN.po |   2 +-
+ plugins/po/ca.po    |   2 +-
+ plugins/po/cs.po    |   2 +-
+ plugins/po/da.po    |   2 +-
+ plugins/po/de.po    |   6 +-
+ plugins/po/en_GB.po |   2 +-
+ plugins/po/es.po    |   4 +-
+ plugins/po/eu.po    |   2 +-
+ plugins/po/fi.po    |   2 +-
+ plugins/po/fr.po    |   6 +-
+ plugins/po/gu.po    |   2 +-
+ plugins/po/hi.po    |   2 +-
+ plugins/po/hu.po    |   2 +-
+ plugins/po/it.po    |   2 +-
+ plugins/po/ja.po    | 245 ++++++++++++++++++++++++++++++++++++++-------
+ plugins/po/kn.po    |   2 +-
+ plugins/po/ko.po    |   2 +-
+ plugins/po/ml.po    |   2 +-
+ plugins/po/mr.po    |   2 +-
+ plugins/po/nl.po    |   2 +-
+ plugins/po/or.po    |   2 +-
+ plugins/po/pa.po    |   2 +-
+ plugins/po/pl.po    |   2 +-
+ plugins/po/pt.po    |   2 +-
+ plugins/po/pt_BR.po |   2 +-
+ plugins/po/ru.po    | 278 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ plugins/po/sr.po    |   2 +-
+ plugins/po/sv.po    |   2 +-
+ plugins/po/ta.po    |   2 +-
+ plugins/po/te.po    |   2 +-
+ plugins/po/uk.po    |   2 +-
+ plugins/po/zh_CN.po |   4 +-
+ plugins/po/zh_TW.po |   4 +-
+ 36 files changed, 522 insertions(+), 83 deletions(-)
+
+diff --git a/plugins/po/as.po b/plugins/po/as.po
+index 0b95405..1704386 100644
+--- a/plugins/po/as.po
++++ b/plugins/po/as.po
+@@ -9,7 +9,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/bg.po b/plugins/po/bg.po
+index 4977f2c..5b26dd1 100644
+--- a/plugins/po/bg.po
++++ b/plugins/po/bg.po
+@@ -11,7 +11,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/bn.po b/plugins/po/bn.po
+index 69cdaba..ca655e8 100644
+--- a/plugins/po/bn.po
++++ b/plugins/po/bn.po
+@@ -16,7 +16,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/bn_IN.po b/plugins/po/bn_IN.po
+index befdefd..08c424f 100644
+--- a/plugins/po/bn_IN.po
++++ b/plugins/po/bn_IN.po
+@@ -12,7 +12,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/ca.po b/plugins/po/ca.po
+index 24460d5..6bd1126 100644
+--- a/plugins/po/ca.po
++++ b/plugins/po/ca.po
+@@ -13,7 +13,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/cs.po b/plugins/po/cs.po
+index 475615b..0734ee4 100644
+--- a/plugins/po/cs.po
++++ b/plugins/po/cs.po
+@@ -17,7 +17,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/da.po b/plugins/po/da.po
+index b0f8b7b..60bb35a 100644
+--- a/plugins/po/da.po
++++ b/plugins/po/da.po
+@@ -9,7 +9,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/de.po b/plugins/po/de.po
+index f3ae6c7..9cb3900 100644
+--- a/plugins/po/de.po
++++ b/plugins/po/de.po
+@@ -22,12 +22,12 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2017-10-02 03:32-0400\n"
+-"Last-Translator: Roman Spirgi <rspirgi@gmail.com>\n"
++"PO-Revision-Date: 2017-11-08 05:31-0500\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: German (http://www.transifex.com/projects/p/fedora/language/"
+ "de/)\n"
+ "Language: de\n"
+diff --git a/plugins/po/en_GB.po b/plugins/po/en_GB.po
+index 805672f..acf244d 100644
+--- a/plugins/po/en_GB.po
++++ b/plugins/po/en_GB.po
+@@ -9,7 +9,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/es.po b/plugins/po/es.po
+index e7b87ba..f8fa6eb 100644
+--- a/plugins/po/es.po
++++ b/plugins/po/es.po
+@@ -20,11 +20,11 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2017-10-26 09:46-0400\n"
++"PO-Revision-Date: 2017-11-08 05:31-0500\n"
+ "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Spanish (http://www.transifex.com/projects/p/fedora/language/"
+ "es/)\n"
+diff --git a/plugins/po/eu.po b/plugins/po/eu.po
+index 3ea371b..13a1307 100644
+--- a/plugins/po/eu.po
++++ b/plugins/po/eu.po
+@@ -8,7 +8,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/fi.po b/plugins/po/fi.po
+index 99824c9..a2c2e8d 100644
+--- a/plugins/po/fi.po
++++ b/plugins/po/fi.po
+@@ -10,7 +10,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/fr.po b/plugins/po/fr.po
+index 5906e1e..6f492e9 100644
+--- a/plugins/po/fr.po
++++ b/plugins/po/fr.po
+@@ -22,12 +22,12 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2017-10-05 09:25-0400\n"
+-"Last-Translator: Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>\n"
++"PO-Revision-Date: 2017-11-08 05:31-0500\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: French (http://www.transifex.com/projects/p/fedora/language/"
+ "fr/)\n"
+ "Language: fr\n"
+diff --git a/plugins/po/gu.po b/plugins/po/gu.po
+index a623fb7..384aa3e 100644
+--- a/plugins/po/gu.po
++++ b/plugins/po/gu.po
+@@ -13,7 +13,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/hi.po b/plugins/po/hi.po
+index ec26e87..1e14e77 100644
+--- a/plugins/po/hi.po
++++ b/plugins/po/hi.po
+@@ -15,7 +15,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/hu.po b/plugins/po/hu.po
+index 5976fd1..18e8525 100644
+--- a/plugins/po/hu.po
++++ b/plugins/po/hu.po
+@@ -15,7 +15,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/it.po b/plugins/po/it.po
+index 45df339..8d90578 100644
+--- a/plugins/po/it.po
++++ b/plugins/po/it.po
+@@ -17,7 +17,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/ja.po b/plugins/po/ja.po
+index c93f7a3..93bf6bb 100644
+--- a/plugins/po/ja.po
++++ b/plugins/po/ja.po
+@@ -19,11 +19,11 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2017-09-01 08:32-0400\n"
++"PO-Revision-Date: 2017-11-20 11:36-0500\n"
+ "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Japanese (http://www.transifex.com/projects/p/fedora/language/"
+ "ja/)\n"
+@@ -82,7 +82,7 @@ msgstr ""
+ msgid ""
+ "If you want to allow $SOURCE_PATH to be able to write to shared public "
+ "content"
+-msgstr ""
++msgstr "$SOURCE_PATH による共有の公開コンテンツへの書き込みを許可する場合"
+ 
+ #: ../src/allow_anon_write.py:45
+ msgid ""
+@@ -153,7 +153,7 @@ msgstr ""
+ msgid ""
+ "If you do not think $SOURCE_PATH should need to map heap memory that is both "
+ "writable and executable."
+-msgstr ""
++msgstr "$SOURCE_PATH に、書き込みと実行の両方が可能になるヒープメモリーのマッピングを行う必要がないと考える場合。"
+ 
+ #: ../src/allow_execheap.py:51
+ msgid "you need to report a bug. This is a potentially dangerous access."
+@@ -223,6 +223,17 @@ msgid ""
+ "\n"
+ "    "
+ msgstr ""
++"\n"
++"    $SOURCE アプリケーションは、テキスト移動を要求する $TARGET_PATH \n"
++"    のロードを試行しました。 セキュリティー上の問題となる可能性があります。\n"
++"    ほとんどのライブラリーはこの許可を必要としません。 \n"
++"    <a href=\"http://people.redhat.com/drepper/selinux-mem.html\">\n"
++"    SELinux Memory Protection Tests</a>\n"
++"    のウェブページではこのチェックについて説明しています。 このツールはライブラリーが正しく\n"
++"    構築されたかどうかを調べます。そのため、setroubleshoot "
++"はこのアプリケーションがセキュリティーのリスクにさらされているかどうかを判別できません。これは重大な問題となる可能性があり、お使いのシステムがセキュリティーのリスクにさらされている可能性があります。\n"
++"    セキュリティー管理者に連絡し、この問題をレポートしてください。\n"
++"    "
+ 
+ #: ../src/allow_execmod.py:62
+ msgid ""
+@@ -310,7 +321,7 @@ msgstr ""
+ msgid ""
+ "If you do not think $SOURCE_PATH should need to map stack memory that is "
+ "both writable and executable."
+-msgstr ""
++msgstr "$SOURCE_PATH に書き込みと実行の両方が可能となるスタックメモリーのマッピングを行なう必要がある場合。"
+ 
+ #: ../src/allow_execstack.py:90
+ msgid "you need to report a bug. \n"
+@@ -323,7 +334,9 @@ msgstr "バグをレポートする必要があります。\n"
+ msgid "If you believe that \n"
+ "%s\n"
+ "should not require execstack"
+-msgstr ""
++msgstr "%s は \n"
++"execstack を\n"
++"必要としないと信じている場合"
+ 
+ #: ../src/allow_execstack.py:108
+ #, python-format
+@@ -416,7 +429,7 @@ msgstr ""
+ 
+ #: ../src/allow_ftpd_use_cifs.py:62
+ msgid "If you want to allow ftpd to write to cifs file systems"
+-msgstr ""
++msgstr "ftpd が、cifs ファイルシステムに書込むことを許可したい場合"
+ 
+ #: ../src/allow_ftpd_use_cifs.py:63 ../src/allow_ftpd_use_nfs.py:65
+ msgid "you must tell SELinux about this"
+@@ -500,7 +513,7 @@ msgstr ""
+ 
+ #: ../src/allow_ftpd_use_nfs.py:64
+ msgid "If you want to allow ftpd to write to nfs file systems"
+-msgstr ""
++msgstr "ftpd が、nfs ファイルシステムに書込むことを許可したい場合"
+ 
+ #: ../src/associate.py:32 ../src/openvpn.py:31 ../src/public_content.py:27
+ #: ../src/qemu_blk_image.py:27 ../src/qemu_file_image.py:27
+@@ -536,7 +549,7 @@ msgstr ""
+ msgid ""
+ "If you want to change the label of $TARGET_PATH to %s, you are not allowed "
+ "to since it is not a valid file type."
+-msgstr ""
++msgstr "$TARGET_PATH のラベルを %s に変更したくても、それは有効なファイルタイプではないため、許可されません。"
+ 
+ #: ../src/associate.py:49
+ msgid "you must pick a valid file label."
+@@ -654,7 +667,7 @@ msgstr ""
+ 
+ #: ../src/bind_ports.py:47
+ msgid "If you want to allow $SOURCE_PATH to bind to network port $PORT_NUMBER"
+-msgstr ""
++msgstr "$SOURCE_PATH をネットワークポート $PORT_NUMBER に接続したい場合"
+ 
+ #: ../src/bind_ports.py:53 ../src/connect_ports.py:51
+ #, python-format
+@@ -720,7 +733,7 @@ msgstr ""
+ #: ../src/catchall_boolean.py:62
+ #, python-format
+ msgid "If you want to %s"
+-msgstr ""
++msgstr "%s がしたい場合"
+ 
+ #: ../src/catchall_boolean.py:65
+ #, python-format
+@@ -829,18 +842,22 @@ msgid ""
+ "If you believe that $SOURCE_BASE_PATH should be allowed $ACCESS access on "
+ "processes labeled $TARGET_TYPE by default."
+ msgstr ""
++"$SOURCE_BASE_PATH に、 $TARGET_TYPE にラベルされているプロセスでの $ACCESS "
++"アクセスがデフォルトで許可されるべきと考える場合。"
+ 
+ #: ../src/catchall.py:52
+ msgid ""
+ "If you believe that $SOURCE_BASE_PATH should have the $ACCESS capability by "
+ "default."
+-msgstr ""
++msgstr "$SOURCE_BASE_PATH には $ACCESS 機能をデフォルトで持たせるべきと考える場合。"
+ 
+ #: ../src/catchall.py:53
+ msgid ""
+ "If you believe that $SOURCE_BASE_PATH should be allowed $ACCESS access on "
+ "the $TARGET_BASE_PATH $TARGET_CLASS by default."
+ msgstr ""
++"$SOURCE_BASE_PATH に、 $TARGET_BASE_PATH $TARGET_CLASS の $ACCESS "
++"アクセスがデフォルトで許可されるべきと考える場合。"
+ 
+ #: ../src/catchall.py:55
+ msgid ""
+@@ -856,6 +873,9 @@ msgid ""
+ "# ausearch -c '$SOURCE' --raw | audit2allow -M my-$MODULE_NAME\n"
+ "# semodule -i my-$MODULE_NAME.pp"
+ msgstr ""
++"以下のコマンドを実行して、このアクセスを許可します:\n"
++"# ausearch -c '$SOURCE' --raw | audit2allow -M my-$MODULE_NAME\n"
++"# semodule -i my-$MODULE_NAME.pp"
+ 
+ #: ../src/connect_ports.py:27 ../src/sandbox_connect.py:29
+ msgid ""
+@@ -881,6 +901,16 @@ msgid ""
+ "    to connect to $PORT_NUMBER, this could signal an intrusion attempt.\n"
+ "    "
+ msgstr ""
++"\n"
++"    $SOURCE による、ポートに関連付けられた SELinux タイプを持たないネットワークポート $PORT_NUMBER "
++"への接続を、SELinux は拒否しました。\n"
++"    $SOURCE の $PORT_NUMBER での接続を許可する必要がある場合は、<i>semanage</i> "
++"コマンドを使用して、$PORT_NUMBER を、$SOURCE_TYPE が接続できるポートタイプに割り当てます (%s)。 \n"
++"    \n"
++"\n"
++"$SOURCE による $PORT_NUMBER への接続が想定されていない場合、 \n"
++"    不正侵入の試行が示唆される可能性があります。\n"
++"    "
+ 
+ #: ../src/connect_ports.py:38
+ #, python-format
+@@ -905,7 +935,7 @@ msgstr ""
+ #: ../src/connect_ports.py:45 ../src/sandbox_connect.py:47
+ msgid ""
+ "If you want to allow $SOURCE_PATH to connect to network port $PORT_NUMBER"
+-msgstr ""
++msgstr "$SOURCE_PATH がネットワークポート $PORT_NUMBER に接続したい場合"
+ 
+ #: ../src/chrome.py:31
+ msgid ""
+@@ -943,7 +973,7 @@ msgstr ""
+ #: ../src/chrome.py:38 ../src/mozplugger.py:38
+ #, python-format
+ msgid "If you want to use the %s package"
+-msgstr ""
++msgstr "%s パッケージを使用したい場合"
+ 
+ #: ../src/chrome.py:43
+ msgid "you must turn off SELinux controls on the Chrome plugins."
+@@ -999,7 +1029,7 @@ msgstr ""
+ 
+ #: ../src/cvs_data.py:44
+ msgid "If $TARGET_BASE_PATH should be shared via the cvs daemon"
+-msgstr ""
++msgstr "$TARGET_BASE_PATH は、cvs デーモンを経由して共有されている必要がある場合"
+ 
+ #: ../src/cvs_data.py:45 ../src/qemu_file_image.py:49
+ msgid "You need to change the label on $TARGET_BASE_PATH'"
+@@ -1032,7 +1062,7 @@ msgstr ""
+ msgid ""
+ "If you want to help identify if domain needs this access or you have a file "
+ "with the wrong permissions on your system"
+-msgstr ""
++msgstr "ドメインがこのアクセスを必要とするか、または使用システム上に間違えたパーミッションで ファイルを所有しているかを確認したい場合"
+ 
+ #: ../src/dac_override.py:39
+ msgid ""
+@@ -1163,7 +1193,7 @@ msgstr "\n"
+ 
+ #: ../src/disable_ipv6.py:40
+ msgid "If you want to disable IPV6 on this machine"
+-msgstr ""
++msgstr "このマシンにおいて IPV6 を無効化したい場合"
+ 
+ #: ../src/disable_ipv6.py:41
+ msgid ""
+@@ -1224,11 +1254,11 @@ msgstr ""
+ 
+ #: ../src/file.py:49
+ msgid "This is caused by a newly created file system."
+-msgstr ""
++msgstr "これは新規作成されたファイルシステムによって引き起こされたものです。"
+ 
+ #: ../src/file.py:51
+ msgid "If you think this is caused by a badly mislabeled machine."
+-msgstr ""
++msgstr "これが、間違ったラベルを付けられたマシンによって起こされたと考える場合。"
+ 
+ #: ../src/file.py:55
+ msgid "you need to add labels to it."
+@@ -1289,7 +1319,7 @@ msgstr "\n"
+ msgid ""
+ "If you believe $SOURCE_BASE_PATH should be allowed to create "
+ "$TARGET_BASE_PATH files"
+-msgstr ""
++msgstr "$SOURCE_BASE_PATH は、 $TARGET_BASE_PATH ファイルを作成するために許可されているべきと考える場合"
+ 
+ #: ../src/filesystem_associate.py:44
+ msgid ""
+@@ -1321,6 +1351,12 @@ msgid ""
+ "    signal an intrusion attempt.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux は http デーモンによるメール送信を拒否しました。\n"
++"    httpd スクリプトの１つがメールポートへの接続、または sendmail  \n"
++"    コマンドの実行を試行しています。 httpd に sendmail を設定していなかった場合は、\n"
++"     不正侵入の試行が示唆される可能性があります。\n"
++"    "
+ 
+ #: ../src/httpd_can_sendmail.py:39
+ msgid ""
+@@ -1338,7 +1374,7 @@ msgstr ""
+ 
+ #: ../src/httpd_can_sendmail.py:47
+ msgid "If you want to allow httpd to send mail"
+-msgstr ""
++msgstr "httpd が、メール送信することを許可する場合"
+ 
+ #: ../src/httpd_can_sendmail.py:48
+ msgid "you must setup SELinux to allow this"
+@@ -1407,7 +1443,7 @@ msgstr ""
+ msgid ""
+ "If you want to allow httpd to execute cgi scripts and to unify HTTPD "
+ "handling of all content files."
+-msgstr ""
++msgstr "httpd による cgi スクリプトの実行、 および全コンテンツファイルの HTTPD 処理の統一を許可したい場合。"
+ 
+ #: ../src/httpd_unified.py:58
+ msgid ""
+@@ -1480,6 +1516,7 @@ msgid ""
+ "If you do not think $SOURCE_BASE_PATH should try $ACCESS access on "
+ "$TARGET_BASE_PATH."
+ msgstr ""
++"$SOURCE_BASE_PATH が $TARGET_BASE_PATH の  $ACCESS アクセスを試みるべきではないと考える場合。"
+ 
+ #: ../src/kernel_modules.py:45 ../src/selinuxpolicy.py:45
+ msgid ""
+@@ -1539,6 +1576,8 @@ msgid ""
+ "$TARGET_BASE_PATH $TARGET_CLASS, because you believe it should not need this "
+ "access."
+ msgstr ""
++"このアクセスが必要とは思えないため、$SOURCE_BASE_PATH が、 $TARGET_BASE_PATH $TARGET_CLASS へ "
++"$ACCESS アクセスを試みることを、拒否したい場合。"
+ 
+ #: ../src/leaks.py:43
+ msgid ""
+@@ -1552,6 +1591,8 @@ msgid ""
+ "# ausearch -x $SOURCE_PATH --raw | audit2allow -D -M my-$SOURCE\n"
+ "# semodule -i my-$SOURCE.pp"
+ msgstr ""
++"# ausearch -x $SOURCE_PATH --raw | audit2allow -D -M my-$SOURCE\n"
++"# semodule -i my-$SOURCE.pp"
+ 
+ #: ../src/mmap_zero.py:29
+ msgid ""
+@@ -1581,12 +1622,22 @@ msgid ""
+ "    compromised.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux は、カーネルのアドレス空間の低位置を mmap する $SOURCE の機能を \n"
++"    拒否しました。アドレス領域の低位置を mmap する機能は、 \n"
++"    /proc/sys/kernel/mmap_min_addr で設定されます。このようなマッピングを拒否すると、 \n"
++"    カーネルで null deref バグの悪用を防止する手助けになります。このアクセスを\n"
++"    必要とするアプリケーションはすべて独自のポリシーが記述されているはずです。 \n"
++"    セキュリティ侵害されたアプリケーションによりカーネルの修正が試行されると、\n"
++"    この AVC が生成されます。これは深刻な問題です。ご使用のシステムは非常に \n"
++"    高い確率でセキュリティが侵害されている可能性があります。\n"
++"    "
+ 
+ #: ../src/mmap_zero.py:46
+ msgid ""
+ "If you do not think $SOURCE_PATH should need to mmap low memory in the "
+ "kernel."
+-msgstr ""
++msgstr "$SOURCE_PATH にカーネル内で低いメモリーの mmap を行なう必要があるとは思えない場合。"
+ 
+ #: ../src/mmap_zero.py:47
+ msgid "you may be under attack by a hacker, this is a very dangerous access."
+@@ -1644,7 +1695,7 @@ msgstr ""
+ 
+ #: ../src/mounton.py:48
+ msgid "If you want to allow $SOURCE_BASE_PATH to mount on $TARGET_BASE_PATH."
+-msgstr ""
++msgstr "$SOURCE_BASE_PATH が、 $TARGET_BASE_PATH にマウントすることを許可したい場合。"
+ 
+ #: ../src/mounton.py:49
+ msgid "you must change the labeling on $TARGET_PATH."
+@@ -1717,7 +1768,7 @@ msgstr ""
+ msgid ""
+ "If you want to to continue using SELinux Firefox plugin containment rather "
+ "then using mozplugger package"
+-msgstr ""
++msgstr "mozplugger パッケージではなく、SELinux Firefox プラグインの内容を続けて使用したい場合。"
+ 
+ #: ../src/mozplugger_remove.py:45
+ msgid "you must remove the mozplugger package."
+@@ -1732,6 +1783,11 @@ msgid ""
+ "    is labeled correctly.\n"
+ "    "
+ msgstr ""
++"\n"
++"      SELinux は $SOURCE により要求されたアクセスを拒否しました。$TARGET_PATH \n"
++"     には誤ったラベルが付けられている可能性があります。ラベルが適切に設定されている場合、openvpn はホームディレクトリーの \n"
++"      コンテンツを読み込むことができます。\n"
++"      "
+ 
+ #: ../src/openvpn.py:41
+ msgid ""
+@@ -1741,18 +1797,25 @@ msgid ""
+ "    # restorecon -R /root/.ssh\n"
+ "    "
+ msgstr ""
++"\n"
++"    restorecon コマンドを実行することにより、このファイルへデフォルトのシステムコンテキストを\n"
++"     復元できます。  \n"
++"    # restorecon -R /root/.ssh\n"
++"    "
+ 
+ #: ../src/openvpn.py:49
+ msgid ""
+ "If you want to mv $TARGET_BASE_PATH to standard location so that "
+ "$SOURCE_BASE_PATH can have $ACCESS access"
+ msgstr ""
++"$SOURCE_BASE_PATH が $ACCESS へアクセスできるよう、 $TARGET_BASE_PATH を標準の場所に移動したい場合"
+ 
+ #: ../src/openvpn.py:51
+ msgid ""
+ "If you want to modify the label on $TARGET_BASE_PATH so that "
+ "$SOURCE_BASE_PATH can have $ACCESS access on it"
+ msgstr ""
++"$SOURCE_BASE_PATH が $ACCESS へアクセスできるよう、 $TARGET_BASE_PATH のラベルを編集したい場合"
+ 
+ #: ../src/openvpn.py:55
+ msgid "you must move the cert file to the ~/.cert directory"
+@@ -1800,7 +1863,7 @@ msgstr ""
+ 
+ #: ../src/public_content.py:50
+ msgid "If you want to treat $TARGET_BASE_PATH as public content"
+-msgstr ""
++msgstr "$TARGET_BASE_PATH を公開コンテンツとして処理する場合"
+ 
+ #: ../src/public_content.py:51
+ msgid ""
+@@ -1890,7 +1953,7 @@ msgstr ""
+ 
+ #: ../src/qemu_file_image.py:48
+ msgid "If $TARGET_BASE_PATH is a virtualization target"
+-msgstr ""
++msgstr "$TARGET_BASE_PATH が仮想的なターゲットである場合"
+ 
+ #: ../src/restorecon.py:57
+ msgid ""
+@@ -1948,13 +2011,40 @@ msgid ""
+ "package.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux は $SOURCE により要求されたアクセスを拒否しました。$TARGET_PATH には\n"
++"    誤ったラベルが付けられている可能性があります。$TARGET_PATH のデフォルト SELinux タイプは、\n"
++"    <B>%s</B> ですが、現在のタイプは <B>$TARGET_TYPE</B> です。このファイルを\n"
++"    デフォルトのタイプに戻すことにより、問題が解決される可能性があります。\n"
++"    <p>\n"
++"    ファイルのコンテキストは以下の方法で 1 つのファイルに割り当てることができます。\n"
++"    <ul>\n"
++"        <li>1 つのディレクトリー内で作成されたファイルは、デフォルトで親ディレクトリーのファイルコンテキストを受け取ります。\n"
++"        <li>SELinux ポリシーは、ラベル B が付けられたディレクトリーにファイルを作成するコンテキスト A "
++"で実行しているプロセスを指定することにより、\n"
++"            親ディレクトリーから継承したデフォルトのラベルを上書きし、代わりにラベル C を持つファイルを作成するようになります。\n"
++"            この例として、dhclient_t タイプで実行していて、ディレクトリー /etc 内にファイルを作成するような dhcp "
++"クライアントがあります。このファイルは、\n"
++"            通常、親からの継承により etc_t タイプを受け取りますが、SELinux ポリシーの指定により、このファイルには代わりに "
++"net_conf_t タイプでラベルが付けられます。\n"
++"        <li>ユーザーは、chcon や restorecon "
++"などのツールを使用することで、ファイル上のファイルコンテキストを変更することができます。\n"
++"    </ul>\n"
++"    "
++"ユーザーエラーか、通常の制約されたアプリケーションが間違ったドメインで実行されたことにより、このファイルには誤ったラベルが付けられた可能性があります。\n"
++"    <p>\n"
++"    しかし、このファイルにこのタイプのラベルが付けられるはずがないため、これは SELinux 内のバグである可能性もあります。\n"
++"    <p>\n"
++"    これがバグだと思われる場合は、このパッケージについてバグレポートを作成してください。\n"
++"    "
+ 
+ #: ../src/restorecon.py:90
+ #, python-format
+ msgid ""
+ "If you want to fix the label. \n"
+ "$TARGET_PATH default label should be %s."
+-msgstr ""
++msgstr "ラベルを修正する場合。\n"
++"$TARGET_PATH のデフォルトラベルは %s のはずです。"
+ 
+ #: ../src/restorecon.py:96
+ msgid ""
+@@ -1962,6 +2052,8 @@ msgid ""
+ "insufficient permissions to access a parent directory in which case try to "
+ "change the following command accordingly."
+ msgstr ""
++"restorecon "
++"を実行することができます。親ディレクトリーにアクセスするのに必要な権限がないため、要求されたアクセスが停止した可能性があります。この場合は、以下のコマンドを状況に応じて適切に変更します。"
+ 
+ #: ../src/restorecon.py:105 ../src/restorecon_source.py:73
+ msgid "Restore\n"
+@@ -2002,13 +2094,29 @@ msgid ""
+ "package.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux により、$SOURCE のアクセスが拒否されました。\n"
++"    $SOURCE_PATH に誤ったラベルが付けられている可能性があります。\n"
++"    $SOURCE_PATH のデフォルトの SELinux タイプは<B>%s</B> ですが、\n"
++"    現在のタイプは  <B>$SOURCE_TYPE</B> です。\n"
++"    このファイルのタイプをデフォルトに戻すと、問題が解決する場合があります。\n"
++"    <p>\n"
++"    ユーザーエラーか、通常の制限されたアプリケーションが誤ったドメインで\n"
++"    実行されたことにより、このファイルには誤ったラベルが付けられた可能性があります。\n"
++"    <p>\n"
++"    しかし、このファイルにこのライブでラベルが付けられるはずがないため、\n"
++"    SELinux のバグである可能性もあります。\n"
++"    <p>\n"
++"    これがバグだと思われる場合は、このパッケージについてバグレポートを提出してください。\n"
++"    "
+ 
+ #: ../src/restorecon_source.py:60
+ #, python-format
+ msgid ""
+ "If you want to fix the label. \n"
+ "$SOURCE_PATH default label should be %s."
+-msgstr ""
++msgstr "ラベルを修正する場合。\n"
++"$SOURCE_PATH のデフォルトランレベルは %s のはずです。"
+ 
+ #: ../src/restorecon_source.py:65
+ msgid "you can run restorecon."
+@@ -2024,6 +2132,13 @@ msgid ""
+ "    this message could indicate either a bug or an intrusion attempt.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux は、RSYNC が $TARGET_PATH にアクセスするのを拒否しました。\n"
++"    これが RSYNC リポジトリーであるなら、rsync_data_t のファイル\n"
++"    コンテキストラベルを持っている必要があります。$TARGET_PATH を\n"
++"    RSYNC リポジトリーとして使用する予定ではなかった場合、\n"
++"    このメッセージは、バグか、侵入の試みを示します。\n"
++"    "
+ 
+ #: ../src/rsync_data.py:38
+ msgid ""
+@@ -2043,7 +2158,7 @@ msgstr ""
+ 
+ #: ../src/rsync_data.py:45
+ msgid "If $TARGET_BASE_PATH should be shared via the RSYNC daemon"
+-msgstr ""
++msgstr "$TARGET_BASE_PATH は RSYNC デーモンによって共有されるべきです"
+ 
+ #: ../src/rsync_data.py:46
+ msgid "You need to change the label on $TARGET_BASE_PATH"
+@@ -2074,6 +2189,14 @@ msgid ""
+ "Samba and SELinux.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux は、samba が $TARGET_PATH へアクセスするのを拒否しました。\n"
++"    このディレクトリーを samba を共有したい場合は、samba_share_t の\n"
++"    ファイルコンテキストラベルを持っている必要があります。$TARGET_PATH を\n"
++"    samba リポジトリーとして使用する意図ではなかった場合、このメッセージは、\n"
++"    バグか、不正侵入が試みられた可能性を示しています。\n"
++"    Samba と SELinux のセットアップに関する詳細は 'man samba_selinux' を参照してください。\n"
++"    "
+ 
+ #: ../src/samba_share.py:39
+ msgid ""
+@@ -2115,6 +2238,16 @@ msgid ""
+ "    to connect to $PORT_NUMBER, this could signal an intrusion attempt.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux は、$SOURCE が、サンドボックスの中でネットワークポート $PORT_NUMBER に接続することを拒否しました。\n"
++"    $SOURCE による $PORT_NUMBER への接続を許可する場合は、sandbox_web_t や sandbox_net_t "
++"などの別のサンドボックスタイプを使用する必要があります。  \n"
++"    # sandbox -X -t sandbox_net_t $SOURCE\n"
++"    \n"
++"\n"
++"$SOURCE による $PORT_NUMBER への接続ががサポートされていない場合、\n"
++"    これは、侵入の試みである可能性があります。\n"
++"    "
+ 
+ #: ../src/sandbox_connect.py:41
+ msgid ""
+@@ -2174,7 +2307,7 @@ msgstr ""
+ 
+ #: ../src/setenforce.py:27
+ msgid "If you did not directly cause this AVC through testing."
+-msgstr ""
++msgstr "この AVC は、このテストによって直接起こったものではない場合。"
+ 
+ #: ../src/setenforce.py:28
+ msgid "if you think that you might have been hacked"
+@@ -2205,10 +2338,18 @@ msgid ""
+ "    well be compromised.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux は、$SOURCE が /sys/fs/selinux 内のファイルに書き込むのを阻止しました。\n"
++"   /sys/fs/selinux のファイルは、SELinux に設定された方法で制御されます。\n"
++"    /sys/fs/selinux のファイルへの書き込みが必要なすべてのプログラムには、それぞれの\n"
++"    ポリシーが事前に作成されている必要がありました。セキュリティーのリスクにさらされている\n"
++"    アプリケーションが SELinux を無効にしようとすると、この AVC が生成されます。これは重要な問題です。\n"
++"    ご使用のシステムはすでにセキュリティーのリスクにさらされている可能性があります。\n"
++"    "
+ 
+ #: ../src/setenforce.py:48
+ msgid "If you believe $SOURCE_PATH tried to disable SELinux."
+-msgstr ""
++msgstr "$SOURCE_PATH が SELinux を無効にしようとしたと考える場合。"
+ 
+ #: ../src/setenforce.py:49
+ msgid ""
+@@ -2225,6 +2366,11 @@ msgid ""
+ "    is labeled correctly.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux は $SOURCE により要求されたアクセスを拒否しました。$TARGET_PATH に\n"
++"    誤ったラベルが付けられている可能性があります。ラベルが適切に設定されている場合、\n"
++"    sshd は /root/.ssh ディレクトリーのコンテンツを読み込むことができます。\n"
++"    "
+ 
+ #: ../src/sshd_root.py:42
+ msgid ""
+@@ -2234,6 +2380,11 @@ msgid ""
+ "    # restorecon -R /root/.ssh\n"
+ "    "
+ msgstr ""
++"\n"
++"    restorecon コマンドを実行することにより、このファイルへのデフォルトのシステムコンテキストを\n"
++"     復元できます。\n"
++"    # restorecon -R /root/.ssh\n"
++"    "
+ 
+ #: ../src/sshd_root.py:55
+ msgid "Restore Context"
+@@ -2259,6 +2410,13 @@ msgid ""
+ "an intrusion attempt.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux は、$TARGET_PATH への $SOURCE アクセスを拒否しました。\n"
++"    これがスワップファイルならば、swapfile_t のファイルコンテキストラベルを\n"
++"    持っている必要があります。$TARGET_PATH をスワップファイルとして\n"
++"    使用する意図でなかった場合、\n"
++"    このメッセージは、バグか、不正侵入が試みられた可能性を示しています。\n"
++"    "
+ 
+ #: ../src/swapfile.py:38
+ msgid ""
+@@ -2281,7 +2439,7 @@ msgstr ""
+ msgid ""
+ "If you do not believe your $SOURCE_PATH should be modifying the kernel, by "
+ "loading kernel modules"
+-msgstr ""
++msgstr "$SOURCE_PATH は kernel モジュールをロードし、kernel を編集すべきではないと考える場合"
+ 
+ #: ../src/sys_module.py:29
+ msgid "You might have been hacked."
+@@ -2320,7 +2478,7 @@ msgstr ""
+ msgid ""
+ "If you do not believe that $SOURCE_PATH should be attempting to modify the "
+ "kernel by loading a kernel module."
+-msgstr ""
++msgstr "$SOURCE_PATH は kernel モジュールをロードし、kernel を編集しようとすべきではないと考える場合。"
+ 
+ #: ../src/sys_module.py:47
+ msgid "A process might be attempting to hack into your system."
+@@ -2354,7 +2512,7 @@ msgstr ""
+ msgid ""
+ "If you do not want processes to require capabilities to use up all the "
+ "system resources on your system;"
+-msgstr ""
++msgstr "プロセスに、システム上の全システムリソースを消費できる機能を要求させたくない場合;"
+ 
+ #: ../src/sys_resource.py:40
+ msgid ""
+@@ -2375,6 +2533,19 @@ msgid ""
+ "/* Override max number of consoles on console allocation */\n"
+ "/* Override max number of keymaps */\n"
+ msgstr ""
++"システムリソースが不足している原因を突き止め、問題を解決する必要があります。\n"
++"\n"
++"/usr/include/linux/capability.h によると、sys_resource は次のような場合に必要となります。\n"
++"\n"
++"/* リソースの上限を無効にしてから設定する */\n"
++"/* クオータの上限を無効にする */\n"
++"/* ext2 ファイルシステムの予約領域を無効にする */\n"
++"/* ext3 ファイルシステムのデータジャーナリングモードを変更する (ジャーナリングのリソースを使用) */\n"
++"/* 注意: ext2 はリソースの無効化チェックの際に fsuid を受け取るため、fsuid で無効化を行うこともできます */\n"
++"/* IPC メッセージキューでサイズ制限を無効にする */\n"
++"/* リアルタイムクロックからの 64hz を超える割り込みを許可する */\n"
++"/* コンソールの割り当てでコンソールの最大数を無効にする */\n"
++"/* キーマップの最大数を無効にする */\n"
+ 
+ #: ../src/vbetool.py:30
+ msgid ""
+@@ -2429,7 +2600,7 @@ msgstr ""
+ msgid ""
+ "If you want to ignore this AVC because it is dangerous and your machine "
+ "seems to be working correctly."
+-msgstr ""
++msgstr "この AVC を無効にしたい場合。この AVC は警告だが、マシンは正常に動作しているため。"
+ 
+ #: ../src/vbetool.py:56
+ msgid ""
+@@ -2495,7 +2666,7 @@ msgstr ""
+ msgid ""
+ "If you want to ignore this AVC because it is dangerous and your wine "
+ "applications are working correctly."
+-msgstr ""
++msgstr "この AVC を無効にしたい場合。この AVC は警告だが、wine アプリケーションは正常に動作しているため。"
+ 
+ #: ../src/wine.py:67
+ msgid ""
+diff --git a/plugins/po/kn.po b/plugins/po/kn.po
+index 6ef3105..f0b59f3 100644
+--- a/plugins/po/kn.po
++++ b/plugins/po/kn.po
+@@ -15,7 +15,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/ko.po b/plugins/po/ko.po
+index a6a29d9..c25dfd7 100644
+--- a/plugins/po/ko.po
++++ b/plugins/po/ko.po
+@@ -13,7 +13,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/ml.po b/plugins/po/ml.po
+index 27680f5..58dd0d5 100644
+--- a/plugins/po/ml.po
++++ b/plugins/po/ml.po
+@@ -10,7 +10,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/mr.po b/plugins/po/mr.po
+index d8f1947..fdaae64 100644
+--- a/plugins/po/mr.po
++++ b/plugins/po/mr.po
+@@ -11,7 +11,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/nl.po b/plugins/po/nl.po
+index c417761..92be58b 100644
+--- a/plugins/po/nl.po
++++ b/plugins/po/nl.po
+@@ -13,7 +13,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/or.po b/plugins/po/or.po
+index a5264d8..30b788e 100644
+--- a/plugins/po/or.po
++++ b/plugins/po/or.po
+@@ -13,7 +13,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/pa.po b/plugins/po/pa.po
+index 7ed0221..9c46231 100644
+--- a/plugins/po/pa.po
++++ b/plugins/po/pa.po
+@@ -12,7 +12,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/pl.po b/plugins/po/pl.po
+index 0dfcd5f..80c3d17 100644
+--- a/plugins/po/pl.po
++++ b/plugins/po/pl.po
+@@ -12,7 +12,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/pt.po b/plugins/po/pt.po
+index a8ca5b2..aa644fe 100644
+--- a/plugins/po/pt.po
++++ b/plugins/po/pt.po
+@@ -11,7 +11,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/pt_BR.po b/plugins/po/pt_BR.po
+index ecc2f19..0f49ccd 100644
+--- a/plugins/po/pt_BR.po
++++ b/plugins/po/pt_BR.po
+@@ -17,7 +17,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/ru.po b/plugins/po/ru.po
+index 6ee34ba..86dc039 100644
+--- a/plugins/po/ru.po
++++ b/plugins/po/ru.po
+@@ -8,18 +8,17 @@
+ # Yulia <ypoyarko@redhat.com>, 2006, 2008, 2009, 2010, 2012
+ # Yulia <yulia.poyarkova@redhat.com>, 2013
+ # Игорь Горбунов <igor.gorbounov@gmail.com>, 2013
+-# Terry Chuang <tchuang@redhat.com>, 2016. #zanata
+ # yuliya <ypoyarko@redhat.com>, 2016. #zanata
+ # Vit Mojzis <vmojzis@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2017-09-01 08:32-0400\n"
++"PO-Revision-Date: 2017-11-20 11:36-0500\n"
+ "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Russian (http://www.transifex.com/projects/p/fedora/language/"
+ "ru/)\n"
+@@ -197,6 +196,20 @@ msgid ""
+ "bug report.\n"
+ "    "
+ msgstr ""
++"\n"
++"    Приложение $SOURCE попыталось загрузить $TARGET_PATH, что\n"
++"    требует перемещения текста. Это представляет потенциальную проблему с\n"
++"    точки зрения безопасности. Иногда библиотеки\n"
++"    написаны некорректно и требуют разрешения на перемещение. Документ\n"
++"    <a href=\"http://people.redhat.com/drepper/selinux-mem.html\">Тесты "
++"защиты памяти SELinux</a>\n"
++"    объясняет, как отказаться от использования такой возможности. Можно "
++"настроить\n"
++"    SELinux так, чтобы временно разрешить $TARGET_PATH использовать "
++"перемещение,\n"
++"    пока библиотека не будет исправлена. Пожалуйста, создайте \n"
++"    запрос в Bugzilla для этого пакета.\n"
++"    "
+ 
+ #: ../src/allow_execmod.py:45
+ msgid ""
+@@ -229,6 +242,16 @@ msgid ""
+ "\n"
+ "    "
+ msgstr ""
++"\n"
++"    Если вы доверяете $TARGET_PATH, можно изменить контекст\n"
++"    файла на textrel_shlib_t. «chcon -t textrel_shlib_t \n"
++"    $TARGET_PATH»\n"
++"    Также необходимо изменить контексты файлов в системе, используемые по "
++"умолчанию, чтобы они сохранились даже при повторной разметке. \n"
++"    «semanage fcontext -a -t textrel_shlib_t '$FIX_TARGET_PATH'»\n"
++"\n"
++"    \n"
++"    "
+ 
+ #: ../src/allow_execstack.py:60
+ msgid ""
+@@ -260,6 +283,26 @@ msgid ""
+ "file a bug report.\n"
+ "    "
+ msgstr ""
++"\n"
++"    Приложение $SOURCE попыталось сделать свой стек\n"
++"    исполняемым, что представляет потенциальную угрозу безопасности.\n"
++"    В этом не должно быть необходимости. \n"
++"    Память стека не является исполняемой в большинстве ОС\n"
++"    на сегодняшний день, и в будущем это не изменится.\n"
++"    Исполняемый стек представляет собой исключительно серьезную проблему "
++"безопасности.\n"
++"    Ошибка execstack может быть вызвана вредоносными программами.\n"
++"    Иногда приложения, написанные\n"
++"    некорректно, могут запросить это разрешение. Документ\n"
++"    <a href=\"http://people.redhat.com/drepper/selinux-mem.html\">Тесты "
++"защиты памяти SELinux</a>\n"
++"    объясняет, как исключить использование такой возможности. Если $SOURCE "
++"не\n"
++"    работает, когда это необходимо, можно настроить SELinux так, \n"
++"    чтобы временно разрешить такую возможность, пока приложение не будет "
++"исправлено. Пожалуйста, \n"
++"    создайте запрос в Bugzilla для этого пакета.\n"
++"    "
+ 
+ #: ../src/allow_execstack.py:79
+ msgid ""
+@@ -271,6 +314,11 @@ msgid ""
+ "    execstack -s LIBRARY_PATH.\n"
+ "    "
+ msgstr ""
++"\n"
++"Иногда для библиотеки может быть случайно выбран флаг execstack.\n"
++"Его  можно снять, выполнив execstack -c LIBRARY_PATH.\n"
++"После этого перезапустите приложение.\n"
++"Если это не помогло, снова установите флаг: execstack -s LIBRARY_PATH. "
+ 
+ #: ../src/allow_execstack.py:89
+ msgid ""
+@@ -338,6 +386,20 @@ msgid ""
+ "    this access attempt could signal an intrusion attempt.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запретил демону ftp доступ $ACCESS к файлам в файловой системе "
++"CIFS.\n"
++"    CIFS (Comment Internet File System) — сетевая файловая система,\n"
++"   аналогичная SMB (<a href=\"http://www.microsoft.com/mind/1196/cifs."
++"asp\">http://www.microsoft.com/mind/1196/cifs.asp</a>).\n"
++"    Демон ftp попытался прочесть данные из смонтированной системы этого типа."
++"\n"
++"    Так как CIFS не поддерживает низкоуровневое маркирование SELinux, \n"
++"    все файлы и каталоги имеют один и тот же контекст безопасности.\n"
++"     \n"
++"    Если вы не настраивали демон ftp на чтение файлов из CIFS,\n"
++"    попытка получения доступа может служить сигналом вторжения.\n"
++"    "
+ 
+ #: ../src/allow_ftpd_use_cifs.py:46
+ msgid ""
+@@ -408,6 +470,20 @@ msgid ""
+ "    this access attempt could signal an intrusion attempt.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запретил доступ $ACCESS к файлам на разделе NFS.\n"
++"    NFS (Network Filesystem) — сетевая файловая система, обычно используемая "
++"в системах UNIX/Linux.\n"
++"\n"
++"    Демон ftp попытался прочесть данные из смонтированной системы этого типа."
++"\n"
++"    Так как NFS система не поддерживает низкоуровневое маркирование SELinux, "
++"\n"
++"    все файлы и каталоги имеют один и тот же контекст безопасности.\n"
++"    \n"
++"    Если вы не настраивали демон ftp на чтение файлов из NFS,\n"
++"    попытка получения доступа может служить сигналом вторжения.\n"
++"      "
+ 
+ #: ../src/allow_ftpd_use_nfs.py:47
+ msgid ""
+@@ -564,6 +640,16 @@ msgid ""
+ "    to bind to $PORT_NUMBER, this could signal an intrusion attempt.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запретил $SOURCE подключаться сетевому порту $PORT_NUMBER, "
++"которому не присвоен тип SELinux.\n"
++"    Если $SOURCE должен иметь возможность подключения к этому порту, можно "
++"использовать команду <i>semanage</i> для добавления  $PORT_NUMBER к типу, "
++"которому $SOURCE_TYPE может быть сопоставлен (%s).\n"
++"    \n"
++"Если $SOURCE не должен\n"
++"    соответствовать $PORT_NUMBER, возможно, имеет место попытка вторжения.\n"
++"    "
+ 
+ #: ../src/bind_ports.py:38
+ #, python-format
+@@ -636,6 +722,14 @@ msgid ""
+ "    the access.\n"
+ "    "
+ msgstr ""
++"\n"
++"\n"
++"    SELinux отклонил запрос доступа от $SOURCE. Текущие настройки  \n"
++"    логических переменных не разрешают доступ. Такой запрос не \n"
++"    ожидается от $SOURCE и может свидетельствовать о \n"
++"    попытке вторжения. Если же вы действительно хотите разрешить доступ,  \n"
++"    потребуется изменить соответствующие логические переменные. \n"
++"    "
+ 
+ #: ../src/catchall_boolean.py:45
+ msgid ""
+@@ -646,6 +740,12 @@ msgid ""
+ "\n"
+ "    "
+ msgstr ""
++"\n"
++"   Ограничиваемые процессы можно настроить так, чтобы они выполнялись с "
++"различными уровнями доступа. При этом доступ можно разрешать и запрещать с "
++"помощью логических переменных SELinux.\n"
++"\n"
++"    "
+ 
+ #: ../src/catchall_boolean.py:62
+ #, python-format
+@@ -704,6 +804,10 @@ msgid ""
+ "Then execute:\n"
+ "restorecon -v '$FIX_TARGET_PATH'\n"
+ msgstr ""
++"# semanage fcontext -a -t FILE_TYPE '$FIX_TARGET_PATH'\n"
++"где FILE_TYPE может принимать значения: %s. \n"
++"Затем выполните: \n"
++"restorecon -v '$FIX_TARGET_PATH'\n"
+ 
+ #: ../src/catchall.py:29 ../src/chrome.py:29 ../src/mozplugger.py:29
+ #: ../src/mozplugger_remove.py:29
+@@ -941,7 +1045,9 @@ msgstr "Необходимо изменить метку для $TARGET_BASE_PAT
+ msgid "\n"
+ "    SELinux is preventing $SOURCE_PATH the \"$ACCESS\" capability.\n"
+ "    "
+-msgstr ""
++msgstr "\n"
++"    SELinux запретил операцию \"$ACCESS\" для $SOURCE_PATH.  \n"
++"    "
+ 
+ #: ../src/dac_override.py:32
+ msgid ""
+@@ -982,6 +1088,13 @@ msgid ""
+ "If you see PATH record check ownership/permissions on file, and fix it,\n"
+ "otherwise report as a bugzilla."
+ msgstr ""
++"\n"
++"Включите аудит:\n"
++"# auditctl -w /etc/shadow -p w\n"
++"Попытайтесь заново создать AVC, после чего выполните:\n"
++"# ausearch -m avc -ts recent\n"
++"Если запись PATH осуществляет проверку разрешений файла, исправьте это,  \n"
++"в противном случае создайте запрос в Bugzilla."
+ 
+ #: ../src/device.py:29
+ msgid ""
+@@ -990,6 +1103,10 @@ msgid ""
+ "$TARGET_PATH.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запрещает $SOURCE_PATH доступ «$ACCESS» к устройству "
++"$TARGET_PATH.  \n"
++"    "
+ 
+ #: ../src/device.py:33
+ msgid ""
+@@ -1022,6 +1139,33 @@ msgid ""
+ "\n"
+ "    "
+ msgstr ""
++"\n"
++"\n"
++"    SELinux запретил $SOURCE доступ «$ACCESS» к устройству $TARGET_PATH.\n"
++"    $TARGET_PATH отмечено неверно и имеет стандартную метку каталога /dev.\n"
++"    Все символьные и блочные устройства должны иметь свою метку.\n"
++"\n"
++"    Можно попробовать изменить метку, выполнив команду\n"
++"\n"
++"    restorecon -v '$TARGET_PATH'.\n"
++"\n"
++"    Если устройство по прежнему отмечено как device_t, это означает ошибку в "
++"политике SELinux.\n"
++"\n"
++"    Тогда, пожалуйста, создайте запрос в Bugzilla.\n"
++"\n"
++"    Если вы просмотрите метки схожих устройств с помощью команды \n"
++"    ls -lZ /dev/SIMILAR и найдете тип, который подходит $TARGET_PATH,\n"
++"    можно выполнить chcon -t SIMILAR_TYPE '$TARGET_PATH'.\n"
++"    Если это поможет, сохраните изменения:\n"
++"    semanage fcontext -a -t SIMILAR_TYPE '$TARGET_PATH'\n"
++"\n"
++"    Если restorecon изменяет контекст, это означает, что приложение, "
++"создавшее устройство, не использовало\n"
++"    SELinux API.  Если вы знаете, какое приложение создало это устройство, "
++"пожалуйста, создайте запрос в Bugzilla для этого приложения.\n"
++"\n"
++"    "
+ 
+ #: ../src/device.py:56
+ msgid ""
+@@ -1169,6 +1313,19 @@ msgid ""
+ "    for the destination.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запретил $SOURCE создавать файл с контекстом $SOURCE_TYPE в "
++"файловой системе.\n"
++"    Обычно это происходит при использовании команды «cp» для сохранения "
++"контекста файла при\n"
++"    копировании (например, «cp -a»). Не все файловые контексты должны "
++"сохранять постоянство в разных файловых системах.\n"
++"    Например, тип iso9660_t доступных только для чтения файлов не должен "
++"использоваться в\n"
++"    системах, допускающих запись. В этом случае лучше подойдёт команда «cp -"
++"p», так как она адаптирует\n"
++"    файловый контекст в зависимости от назначения.\n"
++"    "
+ 
+ #: ../src/filesystem_associate.py:40
+ msgid ""
+@@ -1274,6 +1431,26 @@ msgid ""
+ "    script types.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запретил доступ $ACCESS для httpd к файлам http.\n"
++"\n"
++"    Обычно httpd обладает полным доступом к файлам\n"
++"    с контекстом http.  Уровень защиты этого компьютера усилен\n"
++"    в то время как переменная $BOOLEAN отключена,\n"
++"    поэтому необходимо отдельно присвоить метки файлам.\n"
++"    Если файл представляет собой сценарий cgi,\n"
++"    ему должна быть присвоена метка httpd_TYPE_script_exec_t.\n"
++"    Если файл предназначен только для чтения, \n"
++"    он должен быть отмечен как  httpd_TYPE_content_t.\n"
++"    Если же файл должен быть доступен для записи,     он должен быть отмечен "
++"как httpd_TYPE_script_rw_t или \n"
++"    httpd_TYPE_script_ra_t. Команда chcon позволяет изменить контекст.\n"
++"    За подробной информацией обратитесь к справочной странице \n"
++"    \"man httpd_selinux\" или  \n"
++"    <a href=\"http://fedora.redhat.com/docs/selinux-apache-fc3\">FAQ</a>.\n"
++"    «TYPE» может принимать значения «sys», «user», «staff» и \n"
++"    некоторые другие значения типов сценариев.\n"
++"    "
+ 
+ #: ../src/httpd_unified.py:50
+ msgid ""
+@@ -1313,6 +1490,17 @@ msgid ""
+ "for more information on setting up httpd and selinux.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запрещает httpd ($SOURCE_PATH) доступ $ACCESS к $TARGET_PATH.\n"
++"\n"
++"    Сценариям httpd не разрешено осуществлять запись без \n"
++"    явной маркировки всех файлов. Если $TARGET_PATH допускает запись, \n"
++"    то его надо отметить как httpd_sys_rw_content_t или "
++"httpd_sys_ra_content_t\n"
++"    (если требуется только добавление).\n"
++"    Подробную информацию можно найти на странице помощи\n"
++"    «man httpd_selinux».\n"
++"    "
+ 
+ #: ../src/httpd_write_content.py:40 ../src/qemu_blk_image.py:45
+ #: ../src/samba_share.py:45 ../src/swapfile.py:45 ../src/xen_image.py:48
+@@ -1344,6 +1532,16 @@ msgid ""
+ "    serious issue. Your system may very well be compromised.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запретил $SOURCE изменять $TARGET.  \n"
++"    $SOURCE пытался изменить поведение ядра или вставить код в ядро. \n"
++"    Для всех приложений, которым необходим такой уровень доступа, \n"
++"    должна существовать отдельная политика. \n"
++"    Если скомпрометированное приложение попытается модифицировать ядро,\n"
++"    будет сгенерировано AVC. \n"
++"    Это является серьёзной проблемой и может служить индикатором того, \n"
++"    что система была скомпрометирована.\n"
++"     "
+ 
+ #: ../src/kernel_modules.py:44 ../src/selinuxpolicy.py:44
+ msgid ""
+@@ -1496,6 +1694,15 @@ msgid ""
+ "    label of the file or directory.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запретил $SOURCE монтировать файловую систему в\n"
++"    «$TARGET_PATH» с типом «$TARGET_TYPE». По умолчанию\n"
++"    SELinux ограничивает монтирование файловых систем \n"
++"    некоторыми файлами или\n"
++"    каталогами (имеющими атрибут mountpoint). \n"
++"    Тип «$TARGET_TYPE» не имеет этого атрибута.  \n"
++"    Можно попробовать изменить метку файла или каталога.\n"
++"    "
+ 
+ #: ../src/mounton.py:43
+ msgid ""
+@@ -2042,6 +2249,10 @@ msgid ""
+ "sandbox -X -t sandbox_net_t $SOURCE_PATH\n"
+ "Please read 'sandbox' man page for more details.\n"
+ msgstr ""
++"необходимо изменить type. sandbox_web_t или sandbox_net_t.\n"
++"Пример:\n"
++"sandbox -X -t sandbox_net_t $SOURCE_PATH\n"
++"За подробной информацией обратитесь к справочной странице sandbox.\n"
+ 
+ #: ../src/selinuxpolicy.py:29
+ msgid "\n"
+@@ -2063,6 +2274,16 @@ msgid ""
+ "    may very well be compromised.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запретил $SOURCE модифицировать $TARGET.\n"
++"    $SOURCE пытался изменить конфигурацию политики selinux.\n"
++"    Для всех приложений, которым необходим такой уровень доступа,\n"
++"    должна существовать отдельная политика.\n"
++"    Если скомпрометированное приложение попытается изменить политику,\n"
++"    будет сгенерировано AVC.\n"
++"    Это является серьезной проблемой и может служить индикатором того, \n"
++"    что система могла быть скомпрометирована.\n"
++"    "
+ 
+ #: ../src/setenforce.py:27
+ msgid "If you did not directly cause this AVC through testing."
+@@ -2207,6 +2428,15 @@ msgid ""
+ "    issue. Your system may very well be compromised.\n"
+ "    "
+ msgstr ""
++"\n"
++"    SELinux запретил $SOURCE загружать модуль ядра.\n"
++"    Для всех приложений, которым необходим такой уровень доступа,\n"
++"    должна существовать отдельная политика.\n"
++"    Если скомпрометированное приложение попытается изменить модуль,\n"
++"    будет сгенерировано AVC.\n"
++"    Это является серьёзной проблемой и может служить индикатором того, \n"
++"    что система была скомпрометирована.\n"
++"     "
+ 
+ #: ../src/sys_module.py:46
+ msgid ""
+@@ -2223,7 +2453,9 @@ msgid ""
+ "\n"
+ "    SELinux is preventing $SOURCE_PATH the \"sys_resource\" capability.\n"
+ "    "
+-msgstr ""
++msgstr "\n"
++"   SELinux запрещает возможность $SOURCE_PATH «sys_resource».\n"
++"    "
+ 
+ #: ../src/sys_resource.py:32
+ msgid ""
+@@ -2235,6 +2467,13 @@ msgid ""
+ "disk space, please report this as a bug.\n"
+ "    "
+ msgstr ""
++"\n"
++"Ограниченные домены не должны требовать «sys_resource». Обычно это означает, "
++"что не хватает какого-либо ресурса, например, места на диске, памяти, квоты "
++"и т.д. Освободите место на диске и это \n"
++"AVC-сообщение должно исчезнуть. Если проблема сохранится после очистки "
++"диска, создайте отчет об ошибке.\n"
++"    "
+ 
+ #: ../src/sys_resource.py:39
+ msgid ""
+@@ -2287,6 +2526,16 @@ msgid ""
+ "\n"
+ "    "
+ msgstr ""
++"\n"
++"SELinux запретила действие, запрошенное $SOURCE, программой изменения\n"
++"состояния видео оборудования. Эта программа обычно выполняет небезопасные\n"
++"операции памяти, в то же время именно так поступают и вредоносные программы,\n"
++"замаскированные под vbetool.\n"
++"Эта утилита восстанавливает состояние видео при возврате системы из\n"
++"ждущего режима. Если компьютер не возобновляет работу, остаётся только\n"
++"разрешить это действие, тем самым ослабив защиту системы.\n"
++"\n"
++"    "
+ 
+ #: ../src/vbetool.py:45 ../src/wine.py:56
+ msgid ""
+@@ -2355,6 +2604,25 @@ msgid ""
+ "\n"
+ "    "
+ msgstr ""
++"\n"
++"SELinux запретил выполнение операции, запрошенной wine-preloader, программой "
++"для запуска приложений Windows на Linux. Известно, что эта программа "
++"использует небезопасные операции с системной памятью, как и вредоносные "
++"программы, маскирующиеся под wine. Если вы\n"
++"пытаетесь запустить приложение Windows, можно либо разрешить\n"
++"данную операцию, тем самым ослабив защиту системы,\n"
++"либо отказаться от использования приложений Windows под Linux. Если же вы не "
++"пытались запустить приложение Windows, это означает, что вы атакованы одной "
++"из таких вредоносных программ или кто-то пытается использовать вашу систему.\n"
++"\n"
++"Обратитесь за более подробной информацией к статье \n"
++"\n"
++"http://wiki.winehq.org/PreloaderPageZeroProblem\n"
++"\n"
++"Там описаны другие проблемы, с которыми сталкивается программа wine из-за "
++"небезопасных операций с памятью, и возможные пути их решения.\n"
++"\n"
++"    "
+ 
+ #: ../src/wine.py:66
+ msgid ""
+diff --git a/plugins/po/sr.po b/plugins/po/sr.po
+index b6d6e87..b615622 100644
+--- a/plugins/po/sr.po
++++ b/plugins/po/sr.po
+@@ -11,7 +11,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/sv.po b/plugins/po/sv.po
+index 341e852..a8902cc 100644
+--- a/plugins/po/sv.po
++++ b/plugins/po/sv.po
+@@ -12,7 +12,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/ta.po b/plugins/po/ta.po
+index 8073908..fcfe3a7 100644
+--- a/plugins/po/ta.po
++++ b/plugins/po/ta.po
+@@ -18,7 +18,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/te.po b/plugins/po/te.po
+index 2a31ef6..3cd20b6 100644
+--- a/plugins/po/te.po
++++ b/plugins/po/te.po
+@@ -12,7 +12,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/uk.po b/plugins/po/uk.po
+index 33df626..11509c4 100644
+--- a/plugins/po/uk.po
++++ b/plugins/po/uk.po
+@@ -12,7 +12,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+diff --git a/plugins/po/zh_CN.po b/plugins/po/zh_CN.po
+index 8e47da1..2df7512 100644
+--- a/plugins/po/zh_CN.po
++++ b/plugins/po/zh_CN.po
+@@ -17,11 +17,11 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2017-09-01 08:31-0400\n"
++"PO-Revision-Date: 2017-11-08 05:31-0500\n"
+ "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/fedora/"
+ "language/zh_CN/)\n"
+diff --git a/plugins/po/zh_TW.po b/plugins/po/zh_TW.po
+index a01d32f..ab983e2 100644
+--- a/plugins/po/zh_TW.po
++++ b/plugins/po/zh_TW.po
+@@ -14,11 +14,11 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
++"POT-Creation-Date: 2017-11-20 17:16+0100\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2017-10-26 09:46-0400\n"
++"PO-Revision-Date: 2017-11-08 05:31-0500\n"
+ "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/fedora/"
+ "language/zh_TW/)\n"
+-- 
+2.15.1
+
