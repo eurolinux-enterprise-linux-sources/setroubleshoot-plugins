@@ -1,0 +1,63 @@
+From a477b7bf9b69d1638e535371c4882ad400d7f39f Mon Sep 17 00:00:00 2001
+From: Vit Mojzis <vmojzis@redhat.com>
+Date: Mon, 6 Aug 2018 15:55:07 +0200
+Subject: [PATCH 2/3] plugins: Handle no "allowed_target_types" properly
+
+These plugins are not helpful in case there are no allowed_target_types.
+
+Resolves: rhbz#1460642, rhbz#1460648
+---
+ plugins/src/bind_ports.py      | 8 ++++----
+ plugins/src/catchall_labels.py | 4 +++-
+ plugins/src/connect_ports.py   | 5 +++--
+ 3 files changed, 10 insertions(+), 7 deletions(-)
+
+diff --git a/plugins/src/bind_ports.py b/plugins/src/bind_ports.py
+index 8c5956e..f813e0e 100644
+--- a/plugins/src/bind_ports.py
++++ b/plugins/src/bind_ports.py
+@@ -62,9 +62,9 @@ class plugin(Plugin):
+     def analyze(self, avc):
+         if (avc.matches_target_types(['hi_reserved_port_t','reserved_port_t', 'port_t', 'unreserved_port_t', ]) and
+                 avc.has_any_access_in(['name_bind'])):
+-                # MATCH
+-            target_types = ", ".join(avc.allowed_target_types())
+-            if target_types != "":
+-                return self.report((avc.tclass.split("_")[0], target_types))
++            # MATCH
++            allowed_types = avc.allowed_target_types()
++            if allowed_types:
++                return self.report((avc.tclass.split("_")[0], ", ".join(allowed_types))
+ 
+         return None
+diff --git a/plugins/src/catchall_labels.py b/plugins/src/catchall_labels.py
+index db3574f..aa83cc0 100644
+--- a/plugins/src/catchall_labels.py
++++ b/plugins/src/catchall_labels.py
+@@ -50,5 +50,7 @@ restorecon -v '$FIX_TARGET_PATH'
+     def analyze(self, avc):
+         if (avc.syscall != 'execve' and avc.matches_target_types(['file_t', 'unlabeled_t', 'usr_t', 'etc_t', 'mnt_t', 'var_t', 'var_lib_t', 'default_t']) and
+                 avc.has_tclass_in(['dir', 'file', 'lnk_file', 'sock_file'])):
+-            return self.report(avc.allowed_target_types())
++            allowed_types = avc.allowed_target_types()
++            if allowed_types:
++                return self.report(allowed_types)
+         return None
+diff --git a/plugins/src/connect_ports.py b/plugins/src/connect_ports.py
+index bedcb21..d376945 100644
+--- a/plugins/src/connect_ports.py
++++ b/plugins/src/connect_ports.py
+@@ -61,7 +61,8 @@ class plugin(Plugin):
+         if (avc.matches_target_types(['hi_reserved_port_t','reserved_port_t', 'port_t', 'unreserved_port_t' ]) and
+             avc.has_any_access_in(['name_connect'])):
+             # MATCH
+-            target_types = ", ".join(avc.allowed_target_types())
+-            return self.report( (avc.tclass.split("_")[0], target_types))
++            allowed_types = avc.allowed_target_types()
++            if allowed_types:
++                return self.report( (avc.tclass.split("_")[0], ", ".join(allowed_types)))
+ 
+         return None
+-- 
+2.14.3
+
