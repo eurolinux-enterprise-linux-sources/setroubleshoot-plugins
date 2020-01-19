@@ -1,13 +1,14 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 3.0.65
-Release: 1%{?dist}
+Version: 3.0.64
+Release: 2.1%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
-Source0: https://releases.pagure.org/setroubleshoot/%{name}-%{version}.tar.gz
+Source0: https://fedorahosted.org/releases/s/e/setroubleshoot/%{name}-%{version}.tar.gz
 # https://bugzilla.redhat.com/show_bug.cgi?id=1030376
 Source1: ru.po
+Patch1: setroubleshoot-plugins-translations.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
@@ -25,6 +26,7 @@ to interpret SELinux AVC denials.
 
 %prep
 %setup -q
+%patch1 -p1
 cp %{SOURCE1} po/
 
 %build
@@ -45,12 +47,6 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
-* Wed Mar 15 2017 Petr Lautrbach <plautrba@redhat.com> - 3.0.65-1
-- Remove duplicated strings from sys_resource.py
-- Spelling fixes
-- Fix catchall plugin message for capability2
-- Stop executing restorecon plugin on specified path prefixes
-
 * Wed Sep 07 2016 Petr Lautrbach <plautrba@redhat.com> 3.0.64-2.1
 - Update translations.
 
